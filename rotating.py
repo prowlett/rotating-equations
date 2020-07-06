@@ -18,7 +18,8 @@ def rotate(n):
     - 6 rotates to 9, and vice versa;
     - 2, 3, 4 and 7 are not rotated meaningfully.
     """
-    if n==1 or n==5 or n==8:
+#    if n==1 or n==5 or n==8: # not including 2
+    if n==1 or n==5 or n==8 or n==2: # including 2
         return n
     elif n==6:
         return 9
@@ -27,7 +28,8 @@ def rotate(n):
     else:
         raise ValueError("Number should be 1, 5, 6, 8 or 9")
 
-candidatevalues = (1,5,6,8,9) # values that can rotate
+#candidatevalues = (1,5,6,8,9) # values that can rotate - not including 2
+candidatevalues = (1,2,5,6,8,9) # values that can rotate - including 2
 
 # Searches all combinations of candidatevalues looking for matching solutions from the standard and rotated equations.
 # Uses SciPy for the square root to deal with any potential complex numbers.
