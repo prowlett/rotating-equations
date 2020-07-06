@@ -30,7 +30,7 @@ def rotate(n):
 candidatevalues = (1,5,6,8,9) # values that can rotate
 
 # Searches all combinations of candidatevalues looking for matching solutions from the standard and rotated equations.
- Uses SciPy for the square root to deal with any potential complex numbers.
+# Uses SciPy for the square root to deal with any potential complex numbers.
 for a in candidatevalues:
     for b in candidatevalues:
         for c in candidatevalues:
@@ -42,8 +42,6 @@ for a in candidatevalues:
                 if (not (a==h and b==g and c==f and d==e)) and (not (a==e and b==f and c==g and d==h)) and b!=1 and c!=1: # only test cases that aren't boring and b and c !=1 so not reducible
                     x1 = (-(d+a) + sqrt((d+a)**2 - 4*(a*d-b*c)))/2 # a,b,c,d +ve
                     x2 = (-(d+a) - sqrt((d+a)**2 - 4*(a*d-b*c)))/2 # a,b,c,d -ve
-                    x3 = (-(h+e) + sqrt((h+e)**2 - 4*(e*h-f*g)))/2 # e,f,g,h +ve
-                    x4 = (-(h+e) - sqrt((h+e)**2 - 4*(e*h-g*f)))/2 # e,f,g,h -ve
                     
-                    if (x1==x3 and x2==x4) or (x1==x4 and x2==x3):
+                    if (d+a) == (h+e) and (d+a)**2 - 4*(a*d-b*c) == (h+e)**2 - 4*(e*h-f*g):
                         print(a,b,c,d," / ",e,f,g,h,"/",x1,x2)
