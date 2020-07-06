@@ -10,4 +10,4 @@ For more details on the background, see this blog post [Finding an equation that
 
 I used this code to generate the equation in [this tweet](https://twitter.com/peterrowlett/status/1074599768993787904).
 
-Note: when I wrote the blog post about this, a comment suggested that 2 could be rotated to itself when written as in a digital clock. Code changed to include 2 in the list of potentially rotated numbers, lines 22 and 32 can be commented out and lines 21 and 31 commented back in to restore the version without 2.
+Note: when I wrote the blog post about this, [a comment](https://aperiodical.com/2018/12/finding-an-equation-that-has-the-same-solution-when-rotated/#comment-817980) suggested that 2 could be rotated to itself when written as in a digital clock. Code changed to include 2 in the list of potentially rotated numbers, lines 22 and 32 can be commented out and lines 21 and 31 commented back in to restore the version without 2.
